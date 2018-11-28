@@ -6,11 +6,11 @@ The WordPress WYSIWYG text editor is very finicky and whitespace-sensitive seemi
 
 #### WYSIWYG Quirks
 
-```
+```html
 <button onclick="function()">Show More</button>
 ```
 
-```
+```html
 <button>Show More</button>
 ```
 
@@ -18,7 +18,7 @@ The WordPress WYSIWYG text editor is very finicky and whitespace-sensitive seemi
 
 Another unfortunate side effect of the editor is that it'll try to insert `<p>` tags everywhere including a `script>` tag. Make sure that there aren't any spaces between function declarations. Potentially, also might need to keep everything left-aligned (not totally tested).
 
-```
+```js
 function one() {
 var a = 'example-class';
 $(a).css('background-color', 'red');
